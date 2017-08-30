@@ -1,0 +1,15 @@
+{
+  "name": "@eliperelman/neutrino-preset-library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Eli Perelman <eli@eliperelman.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "neutrino": "^6.0.0"
+  },
+  "dependencies": {
+    "neutrino-middleware-banner": "^6.1.5",
+    "neutrino-preset-web": "^6.1.5",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
