@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "Eli Perelman <eli@eliperelman.com>",
   "license": "MIT",
+  "repository": "eliperelman/neutrino-preset-library",
   "peerDependencies": {
     "neutrino": "^6.0.0"
   },
