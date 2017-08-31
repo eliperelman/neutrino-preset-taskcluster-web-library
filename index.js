@@ -46,18 +46,22 @@ module.exports = (neutrino) => {
 
   neutrino.config
     .devtool('source-map')
-    .plugins
-      .delete('html')
-      .end()
     .performance
       .hints(true)
       .end()
-    .externals([nodeExternals()])
     .output
       .filename('[name].js')
       .library('[name]')
       .libraryTarget('umd')
       .umdNamedDefine(true);
+
+  neutrino.config.when(process.env.NODE_ENV !== 'test', config => {
+    config
+      .plugins
+        .delete('html')
+        .end()
+      .externals([nodeExternals()])
+  });
 
   neutrino.config.when(neutrino.config.plugins.has('runtime-chunk'),
     config => {
