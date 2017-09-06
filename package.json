@@ -1,10 +1,10 @@
 {
-  "name": "@eliperelman/neutrino-preset-library",
-  "version": "1.0.1",
+  "name": "neutrino-preset-taskcluster-web-library",
+  "version": "1.0.0",
   "main": "index.js",
   "author": "Eli Perelman <eli@eliperelman.com>",
   "license": "MIT",
-  "repository": "eliperelman/neutrino-preset-library",
+  "repository": "eliperelman/neutrino-preset-taskcluster-web-library",
   "peerDependencies": {
     "neutrino": "^6.0.0"
   },
