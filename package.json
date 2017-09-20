@@ -1,6 +1,6 @@
 {
   "name": "neutrino-preset-taskcluster-web-library",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "author": "Eli Perelman <eli@eliperelman.com>",
   "license": "MIT",
