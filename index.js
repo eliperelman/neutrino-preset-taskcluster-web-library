@@ -1,11 +1,12 @@
-const web = require('neutrino-preset-web');
+const rpWeb = require('neutrino-preset-mozilla-rpweb');
 const banner = require('neutrino-middleware-banner');
 const nodeExternals = require('webpack-node-externals');
+const merge = require('deepmerge');
 const { join } = require('path');
 
 const MODULES = join(__dirname, 'node_modules');
 
-module.exports = (neutrino) => {
+module.exports = (neutrino, options = {}) => {
   if (neutrino.options.output.endsWith('build')) {
     neutrino.options.output = 'lib';
   }
@@ -42,7 +43,10 @@ module.exports = (neutrino) => {
     hasSourceMap && neutrino.use(banner);
   } catch (ex) {}
 
-  neutrino.use(web, webOptions);
+  neutrino.use(rpWeb, {
+    react: merge(webOptions, options.react || {}),
+    eslint: options.eslint
+  });
 
   neutrino.config
     .devtool('source-map')

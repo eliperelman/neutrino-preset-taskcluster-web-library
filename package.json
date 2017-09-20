@@ -9,8 +9,9 @@
     "neutrino": "^6.0.0"
   },
   "dependencies": {
+    "deepmerge": "^1.5.1",
     "neutrino-middleware-banner": "^6.1.5",
-    "neutrino-preset-web": "^6.1.5",
+    "neutrino-preset-mozilla-rpweb": "^4.2.0",
     "webpack-node-externals": "^1.6.0"
   }
 }
