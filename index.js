@@ -51,7 +51,7 @@ module.exports = (neutrino, options = {}) => {
   neutrino.config
     .devtool('source-map')
     .performance
-      .hints(true)
+      .hints('error')
       .end()
     .output
       .filename('[name].js')
